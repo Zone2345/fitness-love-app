@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            
             "outputPath": "dist/fitness-love-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -27,9 +28,40 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/css/animate.css",
+              "src/css/bootstrap.css",
+              "src/css/flaticon.css",
+              "src/css/font-awesome.css",
+              "src/css/hover.css",
+              "src/css/jquery.fancybox.css",
+              "src/css/owl.css",
+              "src/css/responsive.css",
+              "src/css/color-themes/blue-theme.css",
+              "src/css/color-themes/fuchsia-theme.css",
+              "src/css/color-themes/green-theme.css",
+              "src/css/color-themes/olive-theme.css",
+              "src/css/color-themes/orange-theme.css",
+              "src/css/color-themes/teal-theme.css",
+              "src/css/color-themes/yellow-theme.css",
+              "src/css/revolution-slider.css",
+              "src/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/jquery.js",
+              "src/js/jquery.easing.min.js",
+              "src/js/bootstrap.min.js",
+              "src/js/revolution.min.js",
+              "src/js/jquery.fancybox.pack.js",
+              "src/js/jquery.fancybox-media.js",
+              "src/js/owl.js",
+              "src/js/appear.js",
+              "src/js/mixitup.js",
+              "src/js/wow.js",
+              "src/js/map-script.js",
+              "src/js/respond.js",
+              "src/js/validate.js",
+              "src/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,5 +124,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
