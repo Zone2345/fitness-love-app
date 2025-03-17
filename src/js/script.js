@@ -3,11 +3,11 @@ $(document).ready(function($) {
 	"use strict";
 	
 	//Hide Loading Box (Preloader)
-	function handlePreloader() {
-		if($('.preloader').length){
-			$('.preloader').delay(200).fadeOut(500);
-		}
-	}
+	// function handlePreloader() {
+	// 	if($('.preloader').length){
+	// 		$('.preloader').delay(500).fadeOut(500);
+	// 	}
+	// }
 	
 	//Update Header Style and Scroll to Top
 	function headerStyle() {
@@ -129,8 +129,8 @@ $(document).ready(function($) {
 		$('.count-box').appear(function(){
 	
 			var $t = $(this),
-				n = $t.find(".count-text").attr("data-stop"),
-				r = parseInt($t.find(".count-text").attr("data-speed"), 10);
+			n = parseInt($t.find(".count-text").attr("data-stop"), 10) || 0, // Ensure valid number
+            r = parseInt($t.find(".count-text").attr("data-speed"), 10) || 1000; // Default speed
 				
 			if (!$t.hasClass("counted")) {
 				$t.addClass("counted");
@@ -309,8 +309,8 @@ $(document).ready(function($) {
    When document is loaded, do
    ========================================================================== */
 	
-	$(window).on('load', function() {
-		handlePreloader();
-	});	
+	// $(window).on('load', function() {
+	// 	handlePreloader();
+	// });	
 
-})(window.jQuery);
+});
