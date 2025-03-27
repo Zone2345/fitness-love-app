@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -6,4 +6,13 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {}
+export class HomeComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    const preloader = document.querySelector('.preloader');
+    if (preloader) {
+      setTimeout(() => {
+        (preloader as HTMLElement).style.display = 'none';
+      }, 1200);
+    }
+  }
+}

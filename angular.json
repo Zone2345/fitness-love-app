@@ -50,7 +50,6 @@
               "src/js/jquery.js",
               "src/js/jquery.easing.min.js",
               "src/js/bootstrap.min.js",
-              "src/js/revolution.min.js",
               "src/js/jquery.fancybox.pack.js",
               "src/js/jquery.fancybox-media.js",
               "src/js/owl.js",
@@ -60,7 +59,8 @@
               "src/js/map-script.js",
               "src/js/respond.js",
               "src/js/validate.js",
-              "src/js/script.js"
+              "src/js/revolution.min.js",
+              "src/js/scripts.js"
             ]
           },
           "configurations": {

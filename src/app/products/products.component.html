@@ -16,65 +16,26 @@
 <!--End Page Title-->
 <div class="sidebar-page-container">
   <div class="row">
+    @if ((products())) { @for (product of products(); track product.id){
     <div class="col-md-3">
       <div class="card">
         <img
-          src="https://via.placeholder.com/150"
+          [src]="'../../../' + product.slika"
           class="img-responsive"
           alt="Product Image"
         />
         <div class="card-body">
-          <h5 class="card-title">Product 1</h5>
-          <p class="card-text">This is a great product tha...</p>
-          <p class="text-primary"><strong>$19.99</strong></p>
-          <button class="btn btn-primary btn-block">Add to Cart</button>
+          <h5 class="card-title">{{ product.naziv }}</h5>
+          <p class="card-text">{{ product.opis }}</p>
+          <div class="price-button-container">
+            <p class="text-primary">
+              <strong>{{ product.cena }}</strong>
+            </p>
+            <button class="btn btn-primary btn-block">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/150"
-          class="img-responsive"
-          alt="Product Image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product 2</h5>
-          <p class="card-text">Another amazing product wi...</p>
-          <p class="text-primary"><strong>$24.99</strong></p>
-          <button class="btn btn-primary btn-block">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/150"
-          class="img-responsive"
-          alt="Product Image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product 3</h5>
-          <p class="card-text">High quality item for eve...</p>
-          <p class="text-primary"><strong>$29.99</strong></p>
-          <button class="btn btn-primary btn-block">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img
-          src="https://via.placeholder.com/150"
-          class="img-responsive"
-          alt="Product Image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Product 4</h5>
-          <p class="card-text">Fantastic product that yo...</p>
-          <p class="text-primary"><strong>$34.99</strong></p>
-          <button class="btn btn-primary btn-block">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+    } }
   </div>
 </div>

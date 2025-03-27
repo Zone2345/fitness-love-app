@@ -22,13 +22,4 @@ export class AppComponent {
       }
     });
   }
-
-  private refreshHomeComponent() {
-    console.log('Refreshing Home Component...');
-    this.router
-      .navigateByUrl('/products', { skipLocationChange: true })
-      .then(() => {
-        this.router.navigateByUrl('/');
-      });
-  }
 }
