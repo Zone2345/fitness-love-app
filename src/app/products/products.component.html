@@ -31,7 +31,12 @@
             <p class="text-primary">
               <strong>{{ product.cena }}</strong>
             </p>
-            <button class="btn btn-primary btn-block">Add to Cart</button>
+            <button
+              class="btn btn-primary btn-block"
+              (click)="addToBasket(product.id, 1)"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

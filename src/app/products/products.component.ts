@@ -3,6 +3,8 @@ import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Products } from './product.model';
 import { environment } from '../../environments/environments';
+import { UpsertBasketDto } from './product.model';
+import Keycloak from 'keycloak-js';
 
 @Component({
   selector: 'app-products',
@@ -12,9 +14,11 @@ import { environment } from '../../environments/environments';
 })
 export class ProductsComponent implements OnInit {
   products = signal<Products[] | undefined>(undefined);
+  upsertBasket: UpsertBasketDto | undefined;
   private httpClient = inject(HttpClient);
   private destroyRef = inject(DestroyRef);
 
+  constructor(private keycloak: Keycloak) {}
   ngOnInit() {
     const subscription = this.httpClient
       .get<{ totalPages: number; data: Products[] }>(
@@ -23,13 +27,35 @@ export class ProductsComponent implements OnInit {
       .subscribe({
         next: (responseData) => {
           this.products.set(responseData.data);
-          console.log(responseData.data);
-          console.log(responseData.totalPages);
         },
       });
 
     this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
+    });
+  }
+
+  addToBasket(id: string, kolicina: number) {
+    const subscription1 = this.httpClient
+      .put(
+        `${environment.apiUrl}/baskets/` + this.keycloak.tokenParsed?.sub,
+        (this.upsertBasket = {
+          items: [
+            {
+              id,
+              kolicina,
+            },
+          ],
+        })
+      )
+      .subscribe({
+        next: (responseData) => {
+          console.log(responseData);
+        },
+      });
+
+    this.destroyRef.onDestroy(() => {
+      subscription1.unsubscribe();
     });
   }
 }
