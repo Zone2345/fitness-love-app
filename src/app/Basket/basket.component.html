@@ -1,19 +1,6 @@
-<section
-  class="page-title"
-  style="background-image: url(images/background/3.jpg)"
->
-  <div class="auto-container">
-    <div class="inner-box">
-      <h1>Basket</h1>
-      <ul class="bread-crumb">
-        <li><a routerLink="">Home</a></li>
-        <li>Basket</li>
-      </ul>
-    </div>
-  </div>
-</section>
+<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
 
-<div class="container-fluid py-5">
+<div class="sidebar-page-container container-fluid py-5">
   <div class="container py-5">
     <div class="table-responsive">
       <table class="table">
@@ -28,12 +15,13 @@
           </tr>
         </thead>
         <tbody>
-          @for(proizvod of basket(); track proizvod.id) {
+          @for(proizvod of basket(); track proizvod.id) { @if(proizvod.kolicina
+          > 0){
           <tr>
             <th scope="row">
               <div class="d-flex align-items-center">
                 <img
-                  src=""
+                  [src]="'../../../' + proizvod.slika"
                   class="img-fluid me-5 rounded-circle"
                   style="width: 80px; height: 80px"
                   alt=""
@@ -51,6 +39,7 @@
                 <div class="input-group-btn">
                   <button
                     class="btn btn-sm btn-minus rounded-circle bg-light border"
+                    (click)="updateBasket(proizvod.id, proizvod.kolicina - 1)"
                   >
                     <i class="fa fa-minus"></i>
                   </button>
@@ -63,6 +52,7 @@
                 <div class="input-group-btn">
                   <button
                     class="btn btn-sm btn-plus rounded-circle bg-light border"
+                    (click)="updateBasket(proizvod.id, proizvod.kolicina + 1)"
                   >
                     <i class="fa fa-plus"></i>
                   </button>
@@ -71,16 +61,19 @@
             </td>
             <td>
               <p class="mb-0 mt-4">
-                {{ totalAmount().toFixed(2) }}
+                {{ (proizvod.cena * proizvod.kolicina).toFixed(2) }}
               </p>
             </td>
             <td>
-              <button class="btn btn-md rounded-circle bg-light border mt-4">
+              <button
+                class="btn btn-md rounded-circle bg-light border mt-4"
+                (click)="updateBasket(proizvod.id, 0)"
+              >
                 <i class="fa fa-times text-danger"></i>
               </button>
             </td>
           </tr>
-          }
+          } }
         </tbody>
       </table>
     </div>

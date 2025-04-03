@@ -1,34 +1,39 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Products } from './product.model';
-import { environment } from '../../environments/environments';
 import { UpsertBasketDto } from './product.model';
 import Keycloak from 'keycloak-js';
+import { BasketService } from '../services/basket.service/basket.service';
+import { ProductService } from './product.service';
+import { DialogComponent } from './dialog/dialog.component';
+import { PageTitelComponent } from '../section/page-titel/page-titel.component';
 
 @Component({
   selector: 'app-products',
-  imports: [RouterLink],
+  imports: [RouterLink, DialogComponent, PageTitelComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
 export class ProductsComponent implements OnInit {
+  pageTitel = 'Products';
+
   products = signal<Products[] | undefined>(undefined);
   upsertBasket: UpsertBasketDto | undefined;
-  private httpClient = inject(HttpClient);
+  showProductDesc = false;
+  product!: Products;
   private destroyRef = inject(DestroyRef);
 
-  constructor(private keycloak: Keycloak) {}
+  constructor(
+    private keycloak: Keycloak,
+    private basketService: BasketService,
+    private productService: ProductService
+  ) {}
   ngOnInit() {
-    const subscription = this.httpClient
-      .get<{ totalPages: number; data: Products[] }>(
-        `${environment.apiUrl}/products`
-      )
-      .subscribe({
-        next: (responseData) => {
-          this.products.set(responseData.data);
-        },
-      });
+    const subscription = this.productService.getProducts().subscribe({
+      next: (responseData) => {
+        this.products.set(responseData.data);
+      },
+    });
 
     this.destroyRef.onDestroy(() => {
       subscription.unsubscribe();
@@ -36,26 +41,15 @@ export class ProductsComponent implements OnInit {
   }
 
   addToBasket(id: string, kolicina: number) {
-    const subscription1 = this.httpClient
-      .put(
-        `${environment.apiUrl}/baskets/` + this.keycloak.tokenParsed?.sub,
-        (this.upsertBasket = {
-          items: [
-            {
-              id,
-              kolicina,
-            },
-          ],
-        })
-      )
-      .subscribe({
-        next: (responseData) => {
-          console.log(responseData);
-        },
-      });
+    this.basketService.UpdateInsertBasket(id, kolicina).subscribe();
+  }
 
-    this.destroyRef.onDestroy(() => {
-      subscription1.unsubscribe();
-    });
+  shoProductDescription(product: Products) {
+    this.product = product;
+    this.showProductDesc = true;
+  }
+
+  onCloseShowDialog() {
+    this.showProductDesc = false;
   }
 }

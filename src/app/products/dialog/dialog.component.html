@@ -1,0 +1,33 @@
+<div class="backdrop" (click)="onCancel()"></div>
+<dialog open (click)="$event.stopPropagation()">
+  <button type="button" class="close-button" (click)="onCancel()">X</button>
+  <div class="dialog-container">
+    <!-- Left Column: Product Image -->
+    <div class="left-column">
+      <img
+        [src]="'../../../' + product.slika"
+        alt="Product Image"
+        class="product-image"
+      />
+    </div>
+    <!-- Right Column: Details -->
+    <div class="right-column">
+      <h2 class="product-title">{{ product.naziv }}</h2>
+      <p class="product-price">{{ product.cena }}</p>
+      <p class="product-description">
+        {{ product.opis }}
+      </p>
+      <div class="price-button-container">
+        <p class="text-primary">
+          <strong>{{ product.cena }}</strong>
+        </p>
+        <button
+          class="btn btn-primary btn-block"
+          (click)="addToBasket(product.id, 1)"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>

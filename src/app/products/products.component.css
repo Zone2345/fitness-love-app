@@ -28,14 +28,14 @@
   flex-grow: 1;
 }
 
-.card-body:hover p.card-text {
+/* .card-body:hover p.card-text {
   max-height: 500px;
   white-space: normal;
   overflow: visible;
   background: white;
   padding: 5px;
   z-index: 10;
-}
+} */
 .text-primary {
   font-size: 18px;
   font-weight: bold;

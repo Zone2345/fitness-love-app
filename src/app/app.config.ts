@@ -10,7 +10,6 @@ import {
   IncludeBearerTokenCondition,
   INCLUDE_BEARER_TOKEN_INTERCEPTOR_CONFIG,
   includeBearerTokenInterceptor,
-  withAutoRefreshToken,
 } from 'keycloak-angular';
 
 const urlCondition = createInterceptorCondition<IncludeBearerTokenCondition>({

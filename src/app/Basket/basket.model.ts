@@ -3,5 +3,5 @@ export interface Basket {
   naziv: string;
   cena: number;
   kolicina: number;
+  slika: string;
 }
-
