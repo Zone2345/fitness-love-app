@@ -5,6 +5,9 @@ import { LoginComponent } from './Login/login/login.component';
 import { BasketComponent } from './Basket/basket.component';
 import { CheckoutPageComponent } from './checkout/checkout-page/checkout-page.component';
 import { AboutComponent } from './home/feature/about/about.component';
+import { BlogComponent } from './home/feature/blog/blog.component';
+import { BlogSingleComponent } from './home/feature/blog-single/blog-single.component';
+import { GaleryFullwidthComponent } from './home/feature/galery-fullwidth/galery-fullwidth.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { key: 'home' } },
@@ -13,6 +16,9 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'checkout', component: CheckoutPageComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog-single', component: BlogSingleComponent },
+  { path: 'gallery', component: GaleryFullwidthComponent },
 ];
 
 export const appRouting = provideRouter(routes);

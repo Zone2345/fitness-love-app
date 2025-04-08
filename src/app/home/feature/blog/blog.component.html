@@ -1,1 +1,227 @@
-<p>blog works!</p>
+<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side-->
+      <div class="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <!--Our Blog-->
+        <div class="our-blog">
+          <!--News Block Two-->
+          <div class="news-block-two">
+            <div class="inner-box">
+              <div class="image">
+                <a href="blog-single.html"
+                  ><img src="images/resource/news-6.jpg" alt=""
+                /></a>
+              </div>
+              <div class="content-box">
+                <div class="posted-date">Objavljeno 3.4.2025.</div>
+                <h3>
+                  <a routerLink="/blog-single">Zdravlje je u svakom pokretu</a>
+                </h3>
+                <div class="text">
+                  Svaki korak, svaki pokret doprinosi našem fizičkom i mentalnom
+                  blagostanju. Trening nije samo način da postignemo fizičke
+                  rezultate, već i da oslobodimo energiju, ojačamo duh i
+                  postignemo unutrašnju ravnotežu.
+                </div>
+                <a class="read-more" href="blog-single.html"
+                  >Pročitaj više... <span class="arrow fa fa-angle-right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!--News Block Two-->
+          <div class="news-block-two">
+            <div class="inner-box">
+              <div class="image">
+                <a href="blog-single.html"
+                  ><img src="images/resource/news-7.jpg" alt=""
+                /></a>
+              </div>
+              <div class="content-box">
+                <div class="posted-date">Objavljeno 3.4.2025.</div>
+                <h3>
+                  <a href="blog-single.html"
+                    >Prestani da se nerviraš ako želiš bolje zdravlje!</a
+                  >
+                </h3>
+                <div class="text">
+                  Koliko puta si se iznervirao jer vaga nije pokazala ono što si
+                  želeo? Ili si bio frustriran jer nisi imao vremena za trening?
+                  Stres ne samo da sabotira tvoj napredak, već može ozbiljno
+                  narušiti tvoje zdravlje!
+                </div>
+                <a class="read-more" href="blog-single.html"
+                  >Pročitaj više... <span class="arrow fa fa-angle-right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!--News Block Two-->
+          <div class="news-block-two">
+            <div class="inner-box">
+              <div class="image">
+                <a href="blog-single.html"
+                  ><img src="images/resource/news-8.jpg" alt=""
+                /></a>
+              </div>
+              <div class="content-box">
+                <div class="posted-date">Objavljeno 7.4.2025.</div>
+                <h3>
+                  <a href="blog-single.html"
+                    >Trening kod kuće: Da li možeš postići iste rezultate?</a
+                  >
+                </h3>
+                <div class="text">
+                  Mnogi veruju da bez teretane nema ozbiljnih rezultata, ali da
+                  li je to zaista istina? Trening kod kuće može biti jednako
+                  efikasan, ako znaš kako da ga prilagodiš svojim ciljevima.
+                </div>
+                <a class="read-more" href="blog-single.html"
+                  >Pročitaj više...<span class="arrow fa fa-angle-right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!--News Block Two-->
+          <div class="news-block-two">
+            <div class="inner-box">
+              <div class="image">
+                <a href="blog-single.html"
+                  ><img src="images/resource/news-9.jpg" alt=""
+                /></a>
+              </div>
+              <div class="content-box">
+                <div class="posted-date">Objavljeno 10.4.2025.</div>
+                <h3>
+                  <a href="blog-single.html"
+                    >Omega-3 masne kiseline – tajno oružje za zdravlje i
+                    performanse</a
+                  >
+                </h3>
+                <div class="text">
+                  Omega-3 masne kiseline nisu samo još jedan trend u ishrani –
+                  one su ključni nutrijent za zdravlje i vrhunske performanse.
+                  Bez obzira da li si sportista ili samo želiš da se osećaš
+                  bolje, omega-3 može napraviti ogromnu razliku!
+                </div>
+                <a class="read-more" href="blog-single.html"
+                  >Read More <span class="arrow fa fa-angle-right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Styled Pagination -->
+        <div class="styled-pagination">
+          <ul class="clearfix">
+            <li>
+              <a class="prev" href="#"
+                ><span class="fa fa-angle-left"></span
+              ></a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#" class="active">2</a></li>
+            <li>
+              <a class="next" href="#"
+                ><span class="fa fa-angle-right"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Sidebar Side-->
+      <div class="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <aside class="sidebar default-sidebar">
+          <!-- Search -->
+          <div class="sidebar-widget search-box">
+            <form method="post" action="contact.html">
+              <div class="form-group">
+                <input
+                  type="search"
+                  name="search-field"
+                  value=""
+                  placeholder="Pretraži"
+                  required
+                />
+                <button type="submit">
+                  <span class="icon fa fa-search"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Popular Posts -->
+          <div class="sidebar-widget popular-posts">
+            <div class="sidebar-title"><h2>Najpopularnije</h2></div>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-1.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Oporavak posle treninga</a>
+              </div>
+              <div class="post-info">1.4.2025.</div>
+            </article>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-1.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Šta jesti pre i posle treninga?</a>
+              </div>
+              <div class="post-info">1.4.2025.</div>
+            </article>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-3.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Skrivene kalorije</a>
+              </div>
+              <div class="post-info">3.4.2025.</div>
+            </article>
+          </div>
+
+          <!--Archive Widget-->
+          <div class="sidebar-widget archive-widget">
+            <div class="sidebar-title">
+              <h2>Arhiva</h2>
+            </div>
+            <ul>
+              <li><a href="#">Mart 2025</a></li>
+              <li><a href="#">April 2025</a></li>
+              <li><a href="#">Maj 2025</a></li>
+              <li><a href="#">Jun 2025</a></li>
+            </ul>
+          </div>
+
+          <!-- Popular Tags -->
+          <div class="sidebar-widget popular-tags">
+            <div class="sidebar-title"><h2>Najčešće</h2></div>
+            <a href="#">Zdrava ishrana</a>
+            <a href="#">Trener</a>
+            <a href="#">Vežbanje</a>
+            <a href="#">Hrana</a>
+            <a href="#">Trening</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,246 @@
-<p>blog-single works!</p>
+<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side-->
+      <div class="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <!--Blog Single-->
+        <div class="blog-single">
+          <!--News Block Two-->
+          <div class="news-block-two">
+            <div class="inner-box">
+              <div class="image">
+                <img src="images/resource/news-6.jpg" alt="" />
+              </div>
+              <div class="content-box">
+                <div class="posted-date">Objavljeno 3.4.2025.</div>
+                <h3>Zdravlje je u svakom pokretu</h3>
+                <div class="text">
+                  <p>
+                    Svaki korak, svaki pokret doprinosi našem fizičkom i
+                    mentalnom blagostanju. Trening nije samo način da postignemo
+                    fizičke rezultate, već i da oslobodimo energiju, ojačamo duh
+                    i postignemo unutrašnju ravnotežu.
+                  </p>
+                  <blockquote>
+                    Svaki pokret doprinosi zdravlju, a svaki trening nas vodi ka
+                    boljem zdravlju.
+                  </blockquote>
+                  <p>
+                    Bez obzira na izazove, svaki pokret nas vodi ka zdravijem i
+                    srećnijem životu.
+                  </p>
+                </div>
+                <!--post-share-options-->
+                <div class="post-share-options">
+                  <ul class="social-links-five">
+                    <li><strong>Podeli:</strong>&ensp;</li>
+                    <li>
+                      <a href="#"><span class="fa fa-facebook"></span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="fa fa-linkedin"></span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="fa fa-google-plus"></span></a>
+                    </li>
+                    <li>
+                      <a href="#"><span class="fa fa-instagram"></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Comments Area-->
+          <div class="comments-area">
+            <h2 class="total-comments">Nedavni komentari (2)</h2>
+            <div class="comment-box">
+              <div class="comment">
+                <div class="comment-inner">
+                  <div class="author-thumb">
+                    <img src="images/resource/author-5.jpg" alt="" />
+                  </div>
+
+                  <!--comment-content-->
+                  <div class="comment-content">
+                    <div class="comment-header clearfix">
+                      <h4>Marko Filipović</h4>
+                      <div class="comment-info">April 7, 2025</div>
+                    </div>
+                    <div class="text">
+                      Koristan članak, baš mi je pomogao da se fokusiram na
+                      vežbanje.
+                    </div>
+                    <a class="reply" href="#"
+                      ><span class="fa fa-mail-forward"></span> Odgovori</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="comment">
+                <div class="comment-inner">
+                  <div class="author-thumb">
+                    <img src="images/resource/author-6.jpg" alt="" />
+                  </div>
+                  <!--comment-content-->
+                  <div class="comment-content">
+                    <div class="comment-header clearfix">
+                      <h4>Jana Milojević</h4>
+                      <div class="comment-info">April 11, 2025</div>
+                    </div>
+                    <div class="text">
+                      Zanimljiv tekst, motiviše da se počne sa treningom.
+                    </div>
+                    <a class="reply" href="#"
+                      ><span class="fa fa-mail-forward"></span> Odgovori</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End Comments Area-->
+
+          <!-- Comment Form -->
+          <div class="comment-form">
+            <div class="group-title"><h2>Komentariši</h2></div>
+
+            <!--Comment Form-->
+            <form method="post" action="contact.html">
+              <div class="row clearfix">
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Ime i Prezime"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+                  <textarea
+                    name="message"
+                    placeholder="Tekst komentara..."
+                  ></textarea>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+                  <button
+                    class="theme-btn btn-style-one"
+                    type="submit"
+                    name="submit-form"
+                  >
+                    Pošalji
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!--End Comment Form -->
+        </div>
+      </div>
+
+      <!--Sidebar Side-->
+      <div class="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <aside class="sidebar default-sidebar">
+          <!-- Search -->
+          <div class="sidebar-widget search-box">
+            <form method="post" action="contact.html">
+              <div class="form-group">
+                <input
+                  type="search"
+                  name="search-field"
+                  value=""
+                  placeholder="Pretraži..."
+                  required
+                />
+                <button type="submit">
+                  <span class="icon fa fa-search"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Popular Posts -->
+          <div class="sidebar-widget popular-posts">
+            <div class="sidebar-title"><h2>Najpopularnije</h2></div>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-1.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Oporavak posle treninga</a>
+              </div>
+              <div class="post-info">1.4.2025.</div>
+            </article>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-2.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Šta jesti pre i posle treninga?</a>
+              </div>
+              <div class="post-info">2.4.2025.</div>
+            </article>
+
+            <article class="post">
+              <figure class="post-thumb">
+                <a href="blog-single.html"
+                  ><img src="images/resource/post-thumb-3.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="text">
+                <a href="blog-single.html">Skrivene kalorije</a>
+              </div>
+              <div class="post-info">3.4.2025.</div>
+            </article>
+          </div>
+
+          <!--Archive Widget-->
+          <div class="sidebar-widget archive-widget">
+            <div class="sidebar-title">
+              <h2>Arhiva</h2>
+            </div>
+            <ul>
+              <li><a href="#">Mart 2025</a></li>
+              <li><a href="#">April 2025</a></li>
+              <li><a href="#">Maj 2025</a></li>
+              <li><a href="#">Jun 2025</a></li>
+            </ul>
+          </div>
+
+          <!-- Popular Tags -->
+          <div class="sidebar-widget popular-tags">
+            <div class="sidebar-title"><h2>Najčešće</h2></div>
+            <a href="#">Zdrava ishrana</a>
+            <a href="#">Trener</a>
+            <a href="#">Vežbanje</a>
+            <a href="#">Hrana</a>
+            <a href="#">Trening</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>

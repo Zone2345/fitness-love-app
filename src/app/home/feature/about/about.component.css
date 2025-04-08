@@ -1,0 +1,35 @@
+/*Social Links Three*/
+
+.social-links-three {
+  position: relative;
+  line-height: 1em;
+  margin-right: 2px;
+}
+
+.social-links-three li {
+  position: relative;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.social-links-three li a {
+  position: relative;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  line-height: 34px;
+  text-align: center;
+  display: inline-block;
+  background-color: #e7e7e7;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+}
+
+.social-links-three a:hover {
+  color: #ffffff;
+  background-color: #99cc00;
+}

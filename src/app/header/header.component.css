@@ -1,31 +1,3 @@
-.scroll-to-top {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  color: #ffffff;
-  font-size: 13px;
-  text-transform: uppercase;
-  line-height: 38px;
-  text-align: center;
-  z-index: 100;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #1c1c1c;
-  display: none;
-  -webkit-transition: all 300ms ease;
-  -ms-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.scroll-to-top:hover {
-  color: #ffffff;
-  background: #99cc00;
-}
-
 /*** 
   
   ====================================================================
@@ -678,79 +650,6 @@
   color: #99cc00;
 }
 
-/*Social Links Two*/
-
-.social-links-two {
-  position: relative;
-  line-height: 1em;
-  margin-top: 2px;
-}
-
-.social-links-two li {
-  position: relative;
-  display: inline-block;
-  line-height: 1em;
-}
-
-.social-links-two li a {
-  position: relative;
-  font-size: 20px;
-  color: #ababab;
-  margin-right: 25px;
-  line-height: 1em;
-  text-align: center;
-  display: inline-block;
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-}
-
-.social-links-two li:last-child a {
-  margin-right: 0px;
-}
-
-.social-links-two a:hover {
-  color: #99cc00;
-}
-
-/*Social Links Three*/
-
-.social-links-three {
-  position: relative;
-  line-height: 1em;
-  margin-right: 2px;
-}
-
-.social-links-three li {
-  position: relative;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.social-links-three li a {
-  position: relative;
-  font-size: 15px;
-  width: 36px;
-  height: 36px;
-  color: #ffffff;
-  line-height: 34px;
-  text-align: center;
-  display: inline-block;
-  background-color: #e7e7e7;
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-}
-
-.social-links-three a:hover {
-  color: #ffffff;
-  background-color: #99cc00;
-}
-
 /*Social Links Four*/
 
 .social-links-four {
@@ -784,43 +683,6 @@
 }
 
 .social-links-four a:hover {
-  color: #ffffff;
-  background-color: #99cc00;
-}
-
-/*Social Links Five*/
-
-.social-links-five {
-  position: relative;
-  line-height: 1em;
-  margin-right: 2px;
-}
-
-.social-links-five li {
-  position: relative;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-.social-links-five li a {
-  position: relative;
-  font-size: 15px;
-  width: 36px;
-  height: 36px;
-  color: #888888;
-  line-height: 34px;
-  text-align: center;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #f4f4f4;
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-}
-
-.social-links-five a:hover {
   color: #ffffff;
   background-color: #99cc00;
 }
