@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { GaleryFullwidthComponent } from "./feature/galery-fullwidth/galery-fullwidth.component";
 
 declare var $: any;
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, GaleryFullwidthComponent],
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements AfterViewInit {

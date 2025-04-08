@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { PageTitelComponent } from "../../../section/page-titel/page-titel.component";
+import { Component, Input } from '@angular/core';
+import { PageTitelComponent } from '../../../section/page-titel/page-titel.component';
 
 @Component({
   selector: 'app-galery-fullwidth',
@@ -9,4 +9,5 @@ import { PageTitelComponent } from "../../../section/page-titel/page-titel.compo
 })
 export class GaleryFullwidthComponent {
   pageTitel = 'Galerija';
+  @Input({ required: true }) isVisible = true;
 }
