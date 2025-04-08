@@ -1,145 +1,120 @@
 <!-- Main Header-->
-<header class="main-header header-style-two">
-  <!-- Header Top -->
-  <div class="header-top">
-    <div class="auto-container clearfix">
-      <!--Top Left-->
-      <div class="top-left pull-left">
-        <ul class="links-nav clearfix">
-          <li>
-            <a href="#"
-              ><span class="icon flaticon-smartphone-1"></span> +1800 123
-              4567</a
-            >
-          </li>
-          <li>
-            <a href="#"
-              ><span class="icon flaticon-envelope"></span>
-              Info&#64;Dresden.com</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!--Top Right-->
-      <div class="top-right pull-right">
-        <ul class="social-links-one">
-          <li>
-            <a href="#"><span class="icon fa fa-facebook"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon fa fa-twitter"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon fa fa-instagram"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon fa fa-pinterest"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon fa fa-google-plus"></span></a>
-          </li>
-          <li>
-            <a href="#"><span class="icon fa fa-youtube-play"></span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- Header Top End -->
-
-  <!--Header-Upper-->
-  <div class="header-upper">
-    <div class="auto-container">
-      <div class="clearfix">
-        <!--Logo Outer-->
-        <div class="logo-outer">
-          <div class="logo">
-            <a href="index.html"
-              ><img src="images/logo.png" alt="" title=""
-            /></a>
-          </div>
+<div class="page-wrapper">
+  <header class="main-header header-style-two">
+    <!-- Header Top -->
+    <div class="header-top">
+      <div class="auto-container clearfix">
+        <!--Top Left-->
+        <div class="top-left pull-left">
+          <ul class="links-nav clearfix">
+            <li>
+              <a href="#"
+                ><span class="icon flaticon-smartphone-1"></span> +381 63 251
+                828</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon flaticon-envelope"></span>
+                fitnessloveteam&#64;hotmail.com</a
+              >
+            </li>
+          </ul>
         </div>
 
-        <div class="nav-outer clearfix">
-          <!-- Main Menu -->
-          <nav class="main-menu">
-            <div class="navbar-header">
-              <!-- Toggle Button -->
+        <!--Top Right-->
+        <div class="top-right pull-right">
+          <ul class="social-links-one">
+            <li>
+              <a href="#"><span class="icon fa fa-facebook"></span></a>
+            </li>
+            <li>
+              <a href="#"><span class="icon fa fa-instagram"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Header Top End -->
+
+    <!--Header-Upper-->
+    <div class="header-upper">
+      <div class="auto-container">
+        <div class="clearfix">
+          <!--Logo Outer-->
+          <div class="logo-outer">
+            <div class="logo">
+              <a routerLink=""
+                ><img
+                  src="images/logos/logoflt.png"
+                  alt="fitnessloveteam"
+                  title=""
+              /></a>
+            </div>
+          </div>
+
+          <div class="nav-outer clearfix">
+            <!-- Main Menu -->
+            <nav class="main-menu">
+              <div class="navbar-header">
+                <!-- Toggle Button -->
+                <button
+                  type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse"
+                >
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+              <div class="navbar-collapse collapse clearfix">
+                <!--Left Nav-->
+                <ul class="navigation clearfix">
+                  <li class="current">
+                    <a routerLink="">Početna strana</a>
+                  </li>
+                  <li><a routerLink="/about">O nama</a></li>
+                  <li class="dropdown">
+                    <a href="#">Ko smo mi?</a>
+                    <ul>
+                      <li><a href="stories.html">Iskustva</a></li>
+                      <li><a href="team.html">Naš tim</a></li>
+                      <li><a href="error-page.html">Error Page</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="services.html">Usluge</a></li>
+                  <li class="dropdown">
+                    <a href="gallery-fullwidth.html">Galerija</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li><a href="contact.html">Kontakt</a></li>
+                  <!-- <li><a routerLink="/products">Products</a></li>
+                  <li><a routerLink="/basket">Basket</a></li> -->
+                  @if(!IsLoggedIn){
+                  <li><a routerLink="/login">Login</a></li>
+                  }
+                </ul>
+              </div>
+            </nav>
+            <!--Bakset Icon-->
+            <div class="basket-box-outer">
               <button
+                class="basket-box-btn"
                 type="button"
-                class="navbar-toggle"
-                data-toggle="collapse"
-                data-target=".navbar-collapse"
+                aria-expanded="false"
               >
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="fa fa-shopping-basket">
+                  {{ 1 }}
+                </span>
               </button>
             </div>
-
-            <div class="navbar-collapse collapse clearfix">
-              <!--Left Nav-->
-              <ul class="navigation clearfix">
-                <li class="current dropdown">
-                  <a href="#">Home</a>
-                  <ul>
-                    <li><a href="index.html">Homepage One</a></li>
-                    <li><a href="index-2.html">Homepage Two</a></li>
-                    <li class="dropdown">
-                      <a href="#">Header Styles</a>
-                      <ul>
-                        <li><a href="index.html">Header Style One</a></li>
-                        <li><a href="index-2.html">Header Style Two</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                  <a href="#">Pages</a>
-                  <ul>
-                    <li><a href="stories.html">Stories</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="error-page.html">Error Page</a></li>
-                  </ul>
-                </li>
-                <li><a href="services.html">Services</a></li>
-                <li class="dropdown">
-                  <a href="#">Gallery</a>
-                  <ul>
-                    <li><a href="gallery.html">Gallery Three Column</a></li>
-                    <li>
-                      <a href="gallery-fullwidth.html">Gallery FullWidth</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#">Blog</a>
-                  <ul>
-                    <li><a href="blog.html">Our Blog</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a routerLink="/products">Products</a></li>
-                <li><a routerLink="/basket">Basket</a></li>
-                @if(!IsLoggedIn){
-                <li><a routerLink="/login">Login</a></li>
-                }
-              </ul>
-            </div>
-          </nav>
-          <!--Bakset Icon-->
-          <div class="basket-box-outer">
-            <button class="basket-box-btn" type="button" aria-expanded="false">
-              <span class="fa fa-shopping-basket">
-                {{ basketCount() }}
-              </span>
-            </button>
-          </div>
-          <!--Search Box-->
-          <!-- <div class="search-box-outer">
+            <!--Search Box-->
+            <!-- <div class="search-box-outer">
             <div class="dropdown">
               <button
                 class="search-box-btn dropdown-toggle"
@@ -176,13 +151,14 @@
               </ul>
             </div>
           </div> -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--End Header Upper-->
+    <!--End Header Upper-->
 
-  <!--Sticky Header-->
-  <!--End Sticky Header-->
-</header>
+    <!--Sticky Header-->
+    <!--End Sticky Header-->
+  </header>
+</div>
 <!--End Main Header -->

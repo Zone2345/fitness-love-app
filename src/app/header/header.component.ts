@@ -18,15 +18,15 @@ export class HeaderComponent {
     private keycloak: Keycloak,
     private basketService: BasketService
   ) {
-    this.basketCount = toSignal(
-      this.basketService.getBasket().pipe(
-        map((responseData) => responseData.items.length),
-        catchError((error) => {
-          console.log(error);
-          return of(0); // Return a default value as an observable
-        })
-      )
-    );
+    // this.basketCount = toSignal(
+    //   this.basketService.getBasket().pipe(
+    //     map((responseData) => responseData.items.length),
+    //     catchError((error) => {
+    //       console.log(error);
+    //       return of(0); // Return a default value as an observable
+    //     })
+    //   )
+    // );
   }
 
   public get IsLoggedIn(): boolean {
