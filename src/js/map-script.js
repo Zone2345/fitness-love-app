@@ -176,7 +176,7 @@ function GmapInit() {
 function MapLoadScript() {
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
-	GmapInit();
+	// GmapInit();
 	document.body.appendChild(script);
 }
 

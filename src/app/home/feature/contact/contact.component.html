@@ -1,1 +1,123 @@
-<p>contact works!</p>
+<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
+<section class="map-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Map Column-->
+      <div class="map-column col-md-9 col-sm-12 col-xs-12">
+        <!--Map Outer-->
+        <div class="map-outer">
+          <!--Map Canvas-->
+          <div
+            class="map-canvas"
+            data-zoom="15"
+            data-lat="44.758385583286646"
+            data-lng="20.48674686757928"
+            data-type="roadmap"
+            data-hue="#ffc400"
+            data-title="Fitness Love Team"
+            data-content="Vojvode Stepe 395b, Beograd<br><a href='mailto:fitnessloveteam&#64;hotmail.com'>fitnessloveteam@hotmail.com</a>"
+          ></div>
+        </div>
+      </div>
+
+      <!--Info Column-->
+      <div class="info-column col-md-3 col-sm-12 col-xs-12">
+        <!--Contact Info-->
+        <div class="contact-info">
+          <div class="inner-box">
+            <div class="icon-box">
+              <span class="icon flaticon-location-pin"></span>
+            </div>
+            <div class="text">
+              Vojvode Stepe 395b, <br />
+              Beograd.
+            </div>
+          </div>
+        </div>
+
+        <!--Contact Info-->
+        <div class="contact-info">
+          <div class="inner-box">
+            <div class="icon-box">
+              <span class="icon flaticon-technology-2"></span>
+            </div>
+            <div class="text">+381 63 251 828</div>
+          </div>
+        </div>
+
+        <!--Contact Info-->
+        <div class="contact-info">
+          <div class="inner-box">
+            <div class="icon-box">
+              <span class="icon flaticon-interface"></span>
+            </div>
+            <div class="text">fitnessloveteam&#64;hotmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Contact Section-->
+
+<!--Contact Form Section-->
+<section class="contact-form-section">
+  <div class="auto-container">
+    <!--Contact Title-->
+    <div class="contact-title">
+      <h2>Ostanimo u kontaktu</h2>
+      <div class="text">
+        Isprobajte naše nove proizvode uz besplatne konsultacije!
+      </div>
+    </div>
+
+    <!--Contact Form-->
+    <div class="contact-form">
+      <form method="post" action="sendemail.php" id="contact-form">
+        <div class="row clearfix">
+          <div class="form-group col-md-4 col-sm-4 col-xs-12">
+            <input
+              type="text"
+              name="name"
+              value=""
+              placeholder="Ime*"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4 col-sm-4 col-xs-12">
+            <input
+              type="email"
+              name="email"
+              value=""
+              placeholder="Prezime"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4 col-sm-4 col-xs-12">
+            <input
+              type="text"
+              name="subject"
+              value=""
+              placeholder="E-mail*"
+              required
+            />
+          </div>
+          <div class="form-group col-md-12 col-sm-12 col-xs-12">
+            <textarea
+              name="message"
+              placeholder="Pitajte sve što Vas zanima..."
+            ></textarea>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-12 col-xs-12 text-left">
+            <button type="submit" class="theme-btn btn-style-one">
+              Pošaljite poruku
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--End Contact Form-->
+  </div>
+</section>
+
