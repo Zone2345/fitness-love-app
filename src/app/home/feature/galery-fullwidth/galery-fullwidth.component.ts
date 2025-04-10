@@ -9,5 +9,4 @@ import { PageTitelComponent } from '../../../section/page-titel/page-titel.compo
 })
 export class GaleryFullwidthComponent {
   pageTitel = 'Galerija';
-  @Input({ required: true }) isVisible = true;
 }

@@ -1,1 +1,173 @@
-<p>stories works!</p>
+<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
+<section class="stories-section">
+  <div class="auto-container">
+    <!--Sec Title-->
+    <div class="sec-title centered">
+      <div class="title">Rezultati Naših Klijenata</div>
+      <h2>Naše Priče o Uspehu</h2>
+      <div class="separetor"></div>
+    </div>
+
+    <div class="row clearfix">
+      <!--Carousel Column-->
+      <div class="carousel-column col-md-6 col-sm-12 col-xs-12">
+        <div class="stories-carousel owl-carousel owl-theme">
+          <div class="story-slide">
+            <div class="clearfix">
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-1.jpg" alt="" />
+                  </div>
+                  <div class="text">Početak saradnje</div>
+                </div>
+              </div>
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-2.jpg" alt="" />
+                  </div>
+                  <div class="text">Nakon 3 meseca</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-slide">
+            <div class="clearfix">
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-1.jpg" alt="" />
+                  </div>
+                  <div class="text">Početak saradnje</div>
+                </div>
+              </div>
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-2.jpg" alt="" />
+                  </div>
+                  <div class="text">Nakon 3 meseca</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-slide">
+            <div class="clearfix">
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-1.jpg" alt="" />
+                  </div>
+                  <div class="text">Početak saradnje</div>
+                </div>
+              </div>
+              <div class="story-box col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                  <div class="image">
+                    <img src="images/resource/slide-img-2.jpg" alt="" />
+                  </div>
+                  <div class="text">Nakon 3 meseca</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Content Column-->
+      <div class="content-column col-md-6 col-sm-12 col-xs-12">
+        <div class="inner-box">
+          <h3>Bogdan je izgubio 16 kg i preko 50 cm u obimima!</h3>
+          <div class="text">
+            Promenio sam svoj lični opis i, kao neko ko nije voleo da trenira, u
+            25. godini života sam zavoleo trening. Ovaj put me naučio da je
+            nikada nije kasno za promene i da uz pravu motivaciju sve postaje
+            moguće.
+          </div>
+          <ul class="list-style-one">
+            <li>90% povećanje fizičke aktivnosti</li>
+            <li>bolji rezultati u treningu i ishrani</li>
+            <li>poboljšanje opšteg zdravlja i energije</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Stories Section-->
+
+<!--FullWidth Section-->
+<section class="fullwidth-section">
+  <div class="section-outer clearfix">
+    <div
+      class="image-column"
+      style="background-image: url(images/resource/image-1.jpg)"
+    >
+      <div class="hidden-image">
+        <img src="images/resource/image-1.jpg" alt="" />
+      </div>
+    </div>
+    <div class="form-column">
+      <div class="content">
+        <div class="sec-title">
+          <h2>Besplatne konsultacije</h2>
+          <div class="separetor"></div>
+        </div>
+
+        <!--Default Form-->
+        <div class="default-form">
+          <form method="post" action="contact.html">
+            <div class="row clearfix">
+              <!--Form Group-->
+              <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <input
+                  type="text"
+                  name="username"
+                  value=""
+                  placeholder="Ime i prezime"
+                  required
+                />
+              </div>
+              <!--Form Group-->
+              <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input
+                  type="email"
+                  name="email"
+                  value=""
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+              <!--Form Group-->
+              <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input
+                  type="text"
+                  name="number"
+                  value=""
+                  placeholder="Broj telefona"
+                  required
+                />
+              </div>
+              <!--Form Group-->
+              <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <textarea
+                  name="message"
+                  placeholder="Vaše pitanje..."
+                ></textarea>
+              </div>
+              <!--Form Group-->
+              <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <button type="submit" class="theme-btn btn-style-one">
+                  Pošalji zahtev
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Default Form-->
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,95 @@
+.coaches-section {
+  position: relative;
+  padding: 140px 0px 110px;
+}
+
+.coach-block {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.coach-block .inner-box {
+  position: relative;
+}
+
+.coach-block .inner-box .image {
+  position: relative;
+}
+
+.coach-block .inner-box .image img {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.coach-block .inner-box .lower-box {
+  position: relative;
+  padding: 25px 30px 30px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(204, 204, 204, 0.4);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(204, 204, 204, 0.4);
+  box-shadow: 0px 0px 20px 0px rgba(204, 204, 204, 0.4);
+  transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  -webkit-transition: all 700ms ease;
+}
+
+.coach-block .inner-box:hover .lower-box {
+  margin-top: -94px;
+}
+
+.coach-block .inner-box h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.coach-block .inner-box h3 a {
+  position: relative;
+  color: #222222;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.coach-block .inner-box h3 a:hover {
+  color: #99cc00;
+}
+
+.coach-block .inner-box .designation {
+  position: relative;
+  color: #888888;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-family: "Lora", serif;
+}
+
+.coach-block .inner-box .text-outer {
+  position: relative;
+  /*border-bottom:10px solid transparent;*/
+  height: 0px;
+  overflow: hidden;
+  transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  -webkit-transition: all 700ms ease;
+}
+
+.coach-block .inner-box .text-outer .text {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  width: 100%;
+  color: #555555;
+  font-size: 14px;
+}
+
+.coach-block .inner-box:hover .lower-box .text-outer {
+  height: 94px;
+}

@@ -9,6 +9,9 @@ import { BlogComponent } from './home/feature/blog/blog.component';
 import { BlogSingleComponent } from './home/feature/blog-single/blog-single.component';
 import { GaleryFullwidthComponent } from './home/feature/galery-fullwidth/galery-fullwidth.component';
 import { ContactComponent } from './home/feature/contact/contact.component';
+import { StoriesComponent } from './home/feature/stories/stories.component';
+import { ServicesComponent } from './home/feature/services/services.component';
+import { TeamComponent } from './home/feature/team/team.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, data: { key: 'home' } },
@@ -21,6 +24,9 @@ export const routes: Routes = [
   { path: 'blog-single', component: BlogSingleComponent },
   { path: 'gallery', component: GaleryFullwidthComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'stories', component: StoriesComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'team', component: TeamComponent },
 ];
 
 export const appRouting = provideRouter(routes);
