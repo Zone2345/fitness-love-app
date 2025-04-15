@@ -8,6 +8,7 @@ import { ProductService } from './product.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { PageTitelComponent } from '../section/page-titel/page-titel.component';
 import { BasketToastDirective } from '../directives/basket-toast.directive';
+import { ToastContainerComponent } from '../toast/toast-container/toast-container.component';
 
 @Component({
   selector: 'app-products',
@@ -16,6 +17,7 @@ import { BasketToastDirective } from '../directives/basket-toast.directive';
     DialogComponent,
     PageTitelComponent,
     BasketToastDirective,
+    ToastContainerComponent,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
