@@ -7,10 +7,16 @@ import { BasketService } from '../services/basket.service/basket.service';
 import { ProductService } from './product.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { PageTitelComponent } from '../section/page-titel/page-titel.component';
+import { BasketToastDirective } from '../directives/basket-toast.directive';
 
 @Component({
   selector: 'app-products',
-  imports: [RouterLink, DialogComponent, PageTitelComponent],
+  imports: [
+    RouterLink,
+    DialogComponent,
+    PageTitelComponent,
+    BasketToastDirective,
+  ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
 })
@@ -44,7 +50,7 @@ export class ProductsComponent implements OnInit {
     this.basketService.UpdateInsertBasket(id, kolicina).subscribe();
   }
 
-  shoProductDescription(product: Products) {
+  showProductDescription(product: Products) {
     this.product = product;
     this.showProductDesc = true;
   }

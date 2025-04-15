@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PageTitelComponent } from '../../../section/page-titel/page-titel.component';
 
 @Component({
@@ -8,5 +8,6 @@ import { PageTitelComponent } from '../../../section/page-titel/page-titel.compo
   styleUrl: './team.component.css',
 })
 export class TeamComponent {
+  @Input() isVisible: boolean = false;
   pageTitel = 'Nas Tim';
 }

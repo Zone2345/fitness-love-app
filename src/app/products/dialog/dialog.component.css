@@ -18,14 +18,14 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
   height: auto;
-  width: 90%;
+  width: 30%;
   background-color: whitesmoke;
   border-radius: 6px;
   border: none;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   padding: 1rem;
-  z-index: 20;
+  z-index: 1000;
 }
 .left-column {
   flex: 1;
@@ -92,4 +92,23 @@ dialog {
   flex-direction: column;
   justify-content: flex-end;
   flex-grow: 0;
+}
+
+.product-price {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center; /* Adjust as needed */
+  font-weight: bold;
+}
+.price {
+  color: #99cc00;
+  font-size: 16px;
+  font-weight: 500;
+}
+.price span {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: line-through;
+  margin: 0 5px 0 0;
 }

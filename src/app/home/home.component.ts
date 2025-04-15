@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TestimonialsComponent } from './feature/testimonials/testimonials.component';
-import { GaleryFullwidthComponent } from "./feature/galery-fullwidth/galery-fullwidth.component";
+import { GaleryFullwidthComponent } from './feature/galery-fullwidth/galery-fullwidth.component';
 
 declare var $: any;
 

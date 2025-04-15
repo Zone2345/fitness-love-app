@@ -18,7 +18,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -28,37 +29,29 @@
               }
             ],
             "styles": [
-              "src/css/animate.css",
-              "src/css/bootstrap.css",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/css/flaticon.css",
               "src/css/font-awesome.css",
-              "src/css/hover.css",
-              "src/css/jquery.fancybox.css",
-              "src/css/owl.css",
+              "node_modules/hover.css/css/hover-min.css",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
               "src/css/responsive.css",
-              "src/css/color-themes/blue-theme.css",
-              "src/css/color-themes/fuchsia-theme.css",
-              "src/css/color-themes/green-theme.css",
-              "src/css/color-themes/olive-theme.css",
-              "src/css/color-themes/orange-theme.css",
-              "src/css/color-themes/teal-theme.css",
-              "src/css/color-themes/yellow-theme.css",
               "src/css/revolution-slider.css",
               "src/css/style.css"
             ],
             "scripts": [
-              "src/js/jquery.js",
-              "src/js/jquery.easing.min.js",
-              "src/js/bootstrap.min.js",
-              "src/js/jquery.fancybox.pack.js",
-              "src/js/jquery.fancybox-media.js",
-              "src/js/owl.js",
-              "src/js/appear.js",
-              "src/js/mixitup.js",
-              "src/js/wow.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery.easing/jquery.easing.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "node_modules/jquery.appear/jquery.appear.js",
+              "node_modules/mixitup/dist/mixitup.min.js",
+              "node_modules/wowjs/dist/wow.min.js",
               "src/js/map-script.js",
-              "src/js/respond.js",
-              "src/js/validate.js",
+              "node_modules/respond.js/dest/respond.min.js",
+              "node_modules/jquery-validation/dist/jquery.validate.min.js",
               "src/js/revolution.min.js",
               "src/js/scripts.js"
             ]
@@ -107,7 +100,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

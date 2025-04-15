@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(function($) {
 	
 	"use strict";
 	
@@ -74,9 +74,9 @@ $(document).ready(function($) {
 	
 	
 	//Gallery Filters
-	if($('.filter-list').length){
-		$('.filter-list').mixItUp({});
-	}
+	// if($('.filter-list').length){
+	// 	$('.filter-list').mixItUp({});
+	// }
 	
 	
 	//Accordion Box
@@ -104,57 +104,9 @@ $(document).ready(function($) {
 	
 	
 	//Two Item Carousel
-	if ($('.two-item-carousel').length) {
-		$('.two-item-carousel').owlCarousel({
-			loop:true,
-			margin:80,
-			nav:true,
-			smartSpeed: 700,
-			autoplay: 4000,
-			navText: [ '<span class=""></span>', '<span class=""></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				480:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:2
-				}
-			}
-		});    		
-	}
 	
-	//Stories Carousel
-	if ($('.stories-carousel').length) {
-		$('.stories-carousel').owlCarousel({
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 1000,
-			autoplay: 5000,
-			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				1024:{
-					items:1
-				}
-			}
-		});    		
-	}
 	
+
 	
 	//LightBox / Fancybox
 	if($('.lightbox-image').length) {

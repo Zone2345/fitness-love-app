@@ -1,42 +1,59 @@
 <!--Page Title-->
 <app-page-titel [pageTitel]="pageTitel"></app-page-titel>
 <!--End Page Title-->
+
 @if(showProductDesc){
 <app-dialog (close)="onCloseShowDialog()" [product]="product"></app-dialog>
 }
-<div class="sidebar-page-container">
-  <div class="row">
-    @if ((products())) { @for (product of products(); track product.id){
-    <div class="col-md-3">
-      <div class="card">
-        <img
-          [src]="'../../../' + product.slika"
-          class="img-responsive"
-          alt="Product Image"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.naziv }}</h5>
-          <p class="card-text text">{{ product.opis }}</p>
-          <div class="price-button-container">
-            <p class="text-primary">
-              <strong>{{ product.cena }}</strong>
-            </p>
-            <button
-              class="btn btn-primary btn-block"
-              (click)="addToBasket(product.id, 1)"
-            >
-              Add to Cart
-            </button>
-            <button
-              class="btn btn-primary btn-block"
-              (click)="shoProductDescription(product)"
-            >
-              Show Dialog
-            </button>
+<section class="product-section">
+  <div class="container-fluid">
+    <div class="row">
+      @if ((products())) { @for (product of products(); track product.id){
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="product-grid">
+          <div class="product-image">
+            <a class="image">
+              <img
+                [src]="'../../../' + product.slika"
+                class="img-responsive"
+                alt="Product Image"
+              />
+            </a>
+            <span class="product-sale-label">Sale</span>
+            <a href="#" class="product-like-icon" data-tip="Dodaj u favorite">
+              <i class="fa fa-heart"></i>
+            </a>
+            <ul class="product-links">
+              <li>
+                <a (click)="showProductDescription(product)"
+                  ><i class="fa fa-search"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  (click)="addToBasket(product.id, 1)"
+                  [appBasketToast]="'Product successfully added!'"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="product-content">
+            <!-- Title / text immediately after the image -->
+            <div class="product-title">
+              <h3 class="title">
+                <a href="#">{{ product.naziv }}</a>
+              </h3>
+            </div>
+            <!-- Price fixed at the bottom of the container -->
+            <div class="product-price price">
+              <span>{{ product.cena }}</span
+              >RSD {{ product.cena }}
+            </div>
           </div>
         </div>
       </div>
+      } }
     </div>
-    } }
   </div>
-</div>
+</section>

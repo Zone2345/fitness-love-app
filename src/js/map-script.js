@@ -2,7 +2,7 @@
 /* --------------------------------------------
 Google Map
 -------------------------------------------- */	
-window.onload = MapLoadScript;
+// window.onload = MapLoadScript;
 function GmapInit() {
 	  Gmap = $('.map-canvas');
 	  Gmap.each(function() {

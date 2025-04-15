@@ -1,4 +1,7 @@
-<app-page-titel [pageTitel]="pageTitel"></app-page-titel>
+<app-page-titel
+  [pageTitel]="pageTitel"
+  [isVisible]="showPageTitel"
+></app-page-titel>
 
 <section class="gallery-section">
   <div class="auto-container">
@@ -21,7 +24,14 @@
         </ul>
       </div>
 
-      <div class="filter-list row clearfix">
+      <div
+        class="filter-list row clearfix"
+        appMixitup
+        [mixitupConfig]="{
+          selectors: { target: '.mix' },
+          animation: { duration: 300 }
+        }"
+      >
         <!--Gallery Item-->
         <div class="gallery-item mix all col-md-4 col-sm-6 col-xs-12">
           <div class="inner-box">

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PageTitelComponent {
   @Input({ required: true }) pageTitel!: string;
+  @Input() isVisible: boolean = true;
 }

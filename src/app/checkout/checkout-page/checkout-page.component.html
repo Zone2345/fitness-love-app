@@ -1,236 +1,188 @@
 <app-page-titel [pageTitel]="pageTitel"></app-page-titel>
-<div class="container-fluid pt-5">
-  <div class="row px-xl-5">
-    <div class="col-lg-8">
-      <div class="mb-4">
-        <h4 class="font-weight-semi-bold mb-4">Billing Address</h4>
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <label>First Name</label>
-            <input class="form-control" type="text" placeholder="John" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Last Name</label>
-            <input class="form-control" type="text" placeholder="Doe" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>E-mail</label>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="example@email.com"
-            />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Mobile No</label>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="+123 456 789"
-            />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Address Line 1</label>
-            <input class="form-control" type="text" placeholder="123 Street" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Address Line 2</label>
-            <input class="form-control" type="text" placeholder="123 Street" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Country</label>
-            <select class="custom-select">
-              <option selected>United States</option>
-              <option>Afghanistan</option>
-              <option>Albania</option>
-              <option>Algeria</option>
-            </select>
-          </div>
-          <div class="col-md-6 form-group">
-            <label>City</label>
-            <input class="form-control" type="text" placeholder="New York" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>State</label>
-            <input class="form-control" type="text" placeholder="New York" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>ZIP Code</label>
-            <input class="form-control" type="text" placeholder="123" />
-          </div>
-          <div class="col-md-12 form-group">
-            <div class="custom-control custom-checkbox">
+
+<section class="checkout-form-section">
+  <div class="container">
+    <form class="checkout-form">
+      <div class="row">
+        <!-- Billing Address -->
+        <div class="col-lg-8">
+          <h4 class="mb-4">Detalji za naplatu</h4>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="billingFirstName">Ime</label>
+              <input type="text" class="form-control" id="billingFirstName" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="billingLastName">Prezime</label>
               <input
-                type="checkbox"
-                class="custom-control-input"
-                id="newaccount"
+                type="text"
+                class="form-control"
+                id="billingLastName"
+                placeholder="Doe"
               />
-              <label class="custom-control-label" for="newaccount"
-                >Create an account</label
-              >
             </div>
-          </div>
-          <div class="col-md-12 form-group">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="shipto" />
-              <label
-                class="custom-control-label"
-                for="shipto"
-                data-toggle="collapse"
-                data-target="#shipping-address"
-                >Ship to different address</label
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapse mb-4" id="shipping-address">
-        <h4 class="font-weight-semi-bold mb-4">Shipping Address</h4>
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <label>First Name</label>
-            <input class="form-control" type="text" placeholder="John" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Last Name</label>
-            <input class="form-control" type="text" placeholder="Doe" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>E-mail</label>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="example@email.com"
-            />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Mobile No</label>
-            <input
-              class="form-control"
-              type="text"
-              placeholder="+123 456 789"
-            />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Address Line 1</label>
-            <input class="form-control" type="text" placeholder="123 Street" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Address Line 2</label>
-            <input class="form-control" type="text" placeholder="123 Street" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>Country</label>
-            <select class="custom-select">
-              <option selected>United States</option>
-              <option>Afghanistan</option>
-              <option>Albania</option>
-              <option>Algeria</option>
-            </select>
-          </div>
-          <div class="col-md-6 form-group">
-            <label>City</label>
-            <input class="form-control" type="text" placeholder="New York" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>State</label>
-            <input class="form-control" type="text" placeholder="New York" />
-          </div>
-          <div class="col-md-6 form-group">
-            <label>ZIP Code</label>
-            <input class="form-control" type="text" placeholder="123" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="card border-secondary mb-5">
-        <div class="card-header bg-secondary border-0">
-          <h4 class="font-weight-semi-bold m-0">Order Total</h4>
-        </div>
-        <div class="card-body">
-          <h5 class="font-weight-medium mb-3">Products</h5>
-          <div class="d-flex justify-content-between">
-            <p>Colorful Stylish Shirt 1</p>
-            <p>$150</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Colorful Stylish Shirt 2</p>
-            <p>$150</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Colorful Stylish Shirt 3</p>
-            <p>$150</p>
-          </div>
-          <hr class="mt-0" />
-          <div class="d-flex justify-content-between mb-3 pt-1">
-            <h6 class="font-weight-medium">Subtotal</h6>
-            <h6 class="font-weight-medium">$150</h6>
-          </div>
-          <div class="d-flex justify-content-between">
-            <h6 class="font-weight-medium">Shipping</h6>
-            <h6 class="font-weight-medium">$10</h6>
-          </div>
-        </div>
-        <div class="card-footer border-secondary bg-transparent">
-          <div class="d-flex justify-content-between mt-2">
-            <h5 class="font-weight-bold">Total</h5>
-            <h5 class="font-weight-bold">$160</h5>
-          </div>
-        </div>
-      </div>
-      <div class="card border-secondary mb-5">
-        <div class="card-header bg-secondary border-0">
-          <h4 class="font-weight-semi-bold m-0">Payment</h4>
-        </div>
-        <div class="card-body">
-          <div class="form-group">
-            <div class="custom-control custom-radio">
+            <div class="form-group col-md-6">
+              <label for="billingEmail">Adresa e-poste</label>
               <input
-                type="radio"
-                class="custom-control-input"
-                name="payment"
-                id="paypal"
+                type="email"
+                class="form-control"
+                id="billingEmail"
+                placeholder="example@email.com"
               />
-              <label class="custom-control-label" for="paypal">Paypal</label>
             </div>
-          </div>
-          <div class="form-group">
-            <div class="custom-control custom-radio">
+            <div class="form-group col-md-6">
+              <label for="billingMobile">Telefon</label>
+              <input type="number" class="form-control" id="billingMobile" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="billingAddress1">Ulica i kucni broj</label>
+              <input type="text" class="form-control" id="billingAddress1" />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="billingCountry">Drzava / Region</label>
+              <select class="form-control" id="billingCountry">
+                <option selected>Srbija</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="billingCity">Grad</label>
               <input
-                type="radio"
-                class="custom-control-input"
-                name="payment"
-                id="directcheck"
+                type="text"
+                class="form-control"
+                id="billingCity"
+                placeholder="Beograd"
               />
-              <label class="custom-control-label" for="directcheck"
-                >Direct Check</label
-              >
+            </div>
+            <div class="form-group col-md-6">
+              <label for="billingZip">Postanski Broj</label>
+              <input type="text" class="form-control" id="billingZip" />
+            </div>
+            <div class="form-group col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="shipToDifferent"
+                  (change)="toggleShippingAddress($event)"
+                />
+                <label class="form-check-label" for="shipToDifferent">
+                  Isporuka na drugu adresu?
+                </label>
+              </div>
             </div>
           </div>
-          <div class="">
-            <div class="custom-control custom-radio">
-              <input
-                type="radio"
-                class="custom-control-input"
-                name="payment"
-                id="banktransfer"
-              />
-              <label class="custom-control-label" for="banktransfer"
-                >Bank Transfer</label
-              >
-            </div>
-          </div>
-        </div>
-        <div class="card-footer border-secondary bg-transparent">
-          <button
-            class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3"
+          <!-- Shipping Address (Optional Section) -->
+          <div
+            *ngIf="showShippingAddress"
+            class="collapse"
+            id="shippingAddressSection"
           >
-            Place Order
-          </button>
+            <h4 class="mb-4">Adresa za Dostavu</h4>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="shippingFirstName">Ime</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="shippingFirstName"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingLastName">Prezime</label>
+                <input type="text" class="form-control" id="shippingLastName" />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingEmail">Adresa e-poste</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="shippingEmail"
+                  placeholder="example@email.com"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingMobile">Telefon</label>
+                <input type="number" class="form-control" id="shippingMobile" />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingAddress1">Ulica i kucni broj</label>
+                <input type="text" class="form-control" id="shippingAddress1" />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingCountry">Drzava / Region</label>
+                <select class="form-control" id="shippingCountry">
+                  <option selected>Srbija</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingCity">Grad</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="shippingCity"
+                  placeholder="Beograd"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="shippingZip">Postanski Broj</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="shippingZip"
+                  placeholder="10001"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Order Summary & Payment -->
+        <div class="col-lg-4">
+          <!-- Order Summary -->
+          <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+              <h4 class="m-0">Vasa Narudzbina</h4>
+            </div>
+            <div class="card-body">
+              <h5 class="mb-3">Proizvodi</h5>
+              <div class="d-flex justify-content-between">
+                <p>Product 1</p>
+                <p>$150</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Product 2</p>
+                <p>$150</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>Product 3</p>
+                <p>$150</p>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between mb-3 pt-1">
+                <h6>Ukupno</h6>
+                <h6>$450</h6>
+              </div>
+              <div class="d-flex justify-content-between">
+                <h6>Dostava</h6>
+                <h6>$10</h6>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <div class="d-flex justify-content-between mt-2">
+                <h5>Ukupno sa Dostavom</h5>
+                <h5>$460</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Payment Options -->
+          <div class="card">
+            <div class="card-footer bg-transparent">
+              <button type="submit" class="btn btn-lg btn-block btn-primary">
+                Place Order
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
-</div>
-<!-- Checkout End -->
+</section>

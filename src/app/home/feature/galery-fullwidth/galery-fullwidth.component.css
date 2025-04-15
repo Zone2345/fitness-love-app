@@ -188,3 +188,7 @@
   color: #ffffff;
   background: #99cc00;
 }
+
+.mix {
+  display: inline-block !important;
+}
